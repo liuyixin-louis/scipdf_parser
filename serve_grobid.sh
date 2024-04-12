@@ -10,7 +10,7 @@ fi
 machine_arch=$(uname -m)
 
 if [ "$machine_arch" == "armv7l" ] || [ "$machine_arch" == "aarch64" ]; then
-    docker run --rm --gpus all --init --ulimit core=0 -p 8070:8070 grobid/grobid:0.7.3-arm
+    docker run --rm --gpus all --init --ulimit core=0 -p 8070:8070 grobid/grobid:0.8.0-arm
 else
-    docker run --rm --gpus all --init --ulimit core=0 -p 8070:8070 grobid/grobid:0.7.3
+    docker run --rm --gpus all --init --ulimit core=0 -p 8070:8070 grobid/grobid:0.8.0
 fi
